@@ -91,3 +91,7 @@ ul.inline-list {
   margin-left: auto;
   margin-right: 0;
 }
+
+#git-link {
+  color: #0d6efd;
+}
