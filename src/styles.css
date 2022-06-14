@@ -1,0 +1,93 @@
+body {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.container.general-box {
+  margin: 100px auto 0;
+  padding: 0px 0px 10px;
+  border: 1px solid gray;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin: 20px auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+}
+
+a:hover {
+  color: black;
+  transition: all 150ms ease;
+}
+
+ul {
+  list-style: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+.factors {
+  padding-top: 15px;
+}
+
+.col-1 {
+  display: flex;
+  text-align: center;
+}
+
+.measurements {
+  padding-left: 10px;
+}
+
+.value {
+  text-align: right;
+}
+
+.current-city {
+  text-align: right;
+  margin: 20px auto;
+}
+
+.current-city p {
+  text-align: right;
+}
+
+input#location {
+  width: 50%;
+}
+
+ul.inline-list {
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0 7px;
+}
+
+.inline-list li {
+  display: inline;
+  padding: 0 5px;
+}
+
+.card-header p {
+  text-align: left;
+  margin: 0;
+}
+
+.hourly,
+.daily {
+  margin-top: 10px;
+}
+
+.col-5.right {
+  margin-left: auto;
+  margin-right: 0;
+}
