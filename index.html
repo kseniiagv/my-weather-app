@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container general-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <h1>
+              🌞 <span id="temperature">21</span>
+              <a href="#" id="celsius">°C</a> /
+              <a href="#" id="fahrenheit">ºF</a>
+            </h1>
+            <div class="row factors">
+              <div class="col-1">
+                <ul>
+                  <li>☔</li>
+                  <li>💧</li>
+                  <li>💨</li>
+                  <li>😎</li>
+                </ul>
+              </div>
+              <div class="col measurements">
+                <ul>
+                  <li>Precipitation</li>
+                  <li>Humidity</li>
+                  <li>Wind</li>
+                  <li>UV Index</li>
+                </ul>
+              </div>
+              <div class="col value">
+                <ul>
+                  <li><span id="first">0</span>%</li>
+                  <li><span id="second">31</span>%</li>
+                  <li><span id="third">18</span> m/sec</li>
+                  <li><span id="fourth">2</span> of 10</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5 right">
+            <div class="row current-city">
+              <h2 id="current-city"></h2>
+              <p>
+                <span id="day-time"></span>
+                <br />
+                <span id="day-weather"></span>
+              </p>
+            </div>
+            <div class="row">
+              <form id="input-form">
+                <input
+                  type="text"
+                  placeholder="Type your current location"
+                  id="location"
+                  value=""
+                />
+
+                <input type="button" value="search" id="special" />
+                <input type="button" value="current" id="current" />
+              </form>
+            </div>
+            <div>
+              <ul class="inline-list">
+                <li>Popular:</li>
+                <li><a href="#" class="popular-city">London</a></li>
+                <li><a href="#" class="popular-city">New York</a></li>
+                <li><a href="#" class="popular-city">Milan</a></li>
+                <li><a href="#" class="popular-city">Madrid</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container hourly">
+        <div class="card text-center">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="true" href="#"
+                  >Temperature</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Precipitation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Wind</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">11:00<br />☀️<br />21°C</div>
+              <div class="col">12:00<br />🌤️<br />22°C</div>
+              <div class="col">13:00<br />🌤️<br />23°C</div>
+              <div class="col">14:00<br />⛅<br />24°C</div>
+              <div class="col">15:00<br />☀️<br />25°C</div>
+              <div class="col">16:00<br />☀️<br />25°C</div>
+              <div class="col">17:00<br />☀️<br />24°C</div>
+              <div class="col">18:00<br />🌤️<br />24°C</div>
+              <div class="col">19:00<br />🌤️<br />24°C</div>
+              <div class="col">20:00<br />⛅<br />23°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container daily">
+        <div class="card text-center">
+          <div class="card-header">
+            <p>Daily Forecast</p>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">Wed<br />☀️<br /><strong>25°</strong> 13°</div>
+              <div class="col">Thu<br />🌤️<br /><strong>27°</strong> 18°</div>
+              <div class="col">Fri<br />🌤️<br /><strong>22°</strong> 15°</div>
+              <div class="col">Sat<br />⛅<br /><strong>19°</strong> 13°</div>
+              <div class="col">Sun<br />☀️<br /><strong>18°</strong> 10°</div>
+              <div class="col">Mon<br />☀️<br /><strong>18°</strong> 11°</div>
+              <div class="col">Tue<br />☀️<br /><strong>20°</strong> 13°</div>
+              <div class="col">Wed<br />🌤️<br /><strong>24°</strong> 14°</div>
+              <div class="col">Thu<br />🌤️<br /><strong>24°</strong> 17°</div>
+              <div class="col">Fri<br />⛅<br /><strong>23°</strong> 16°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
